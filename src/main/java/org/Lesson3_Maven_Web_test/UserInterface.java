@@ -11,12 +11,12 @@ public class UserInterface {
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Введите номер теста необходимого для проверки работы системы 'Хочу-Хочу':\n" +
-                    "1 - Авторизация пользователя;\n" +
-                    "2 - Добавление продукта в корзину;\n" +
-                    "3 - Добавление продукта в раздел 'Избранное';\n" +
-                    "4 - Отправка сообщения открытой линии CRM;\n" +
-                    "5 - Выполнение всех тестов по порядку.");
+            System.out.println("Enter the test number required to check the system operation 'Xochy-Xochy':\n" +
+                    "1 - User authorization;\n" +
+                    "2 - Adding a product to the basket;\n" +
+                    "3 - Adding a product to the Favorites section;\n" +
+                    "4 - Sending a message to an open CRM line;\n" +
+                    "5 - Running all tests in order.");
             String numberTest = scanner.nextLine();
             try {
                 validateUserInputNumber(numberTest);
@@ -36,13 +36,13 @@ public class UserInterface {
 
     private void validateUserInputNumber(String numberTest) throws IOException {
         if (numberTest == null || numberTest.length() != 1) {
-            throw new IOException("Введите данные согласно списку");
+            throw new IOException("Enter the data according to the list");
         }
         int answer = 0;
         try {
             answer = Integer.parseInt(numberTest);
         } catch (NumberFormatException e) {
-            throw new IOException("Стоит ввести целое число!");
+            throw new IOException("It is worth entering an integer!");
         }
     }
 

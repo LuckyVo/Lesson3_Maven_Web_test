@@ -24,7 +24,7 @@ public class Controller {
     public void onUserInputNumberTest(String numberTest) throws IOException {
         int command = Integer.parseInt(numberTest);
         if (!variantResult.containsKey(command)) {
-            throw new IOException("Ввели отсутсвующую команду!");
+            throw new IOException("Entered the missing command!");
         }
 
         switch (variantResult.get(command)) {

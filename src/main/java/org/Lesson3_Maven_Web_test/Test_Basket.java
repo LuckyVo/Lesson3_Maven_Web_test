@@ -32,7 +32,8 @@ public class Test_Basket {
             WebElement toBasket = driver.findElement(By.xpath(".//button[@data-js='button-buy' " +
                     "and contains(., 'В корзину')]"));
             toBasket.click();
-            WebElement basket = driver.findElement(By.xpath(".//a[@href='/basket/']"));
+            WebElement basket = driver.findElement(By.xpath(".//a[@href='/basket/' " +
+                    "and @class='button-ux main-ux solid checkout']"));
             basket.click();
         } catch (NoSuchElementException | ElementNotInteractableException | StaleElementReferenceException e){
             System.out.println(e.getMessage());
